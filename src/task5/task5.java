@@ -30,7 +30,7 @@ public class task5 {
                 if (fillingVolume+ item.getVolume() > box.getVolume()){
                     continue;
                 }
-                box.items.add(item)
+                box.items.add(item);
                 fillingVolume+=item.getVolume();
             }
         }

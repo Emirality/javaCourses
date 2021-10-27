@@ -25,11 +25,12 @@ public class task5 {
 
     public static void fillBox(Box box, List<Item> list){
         int fillingVolume = 0;
-        loop: for (Item item : list){
-            while(fillingVolume+item.getVolume() < box.getVolume()){
+        for (Item item : list){
+            while(fillingVolume+item.getVolume() <= box.getVolume()){
                 if (fillingVolume+ item.getVolume() > box.getVolume()){
-                    continue loop;
+                    continue;
                 }
+                box.items.add(item)
                 fillingVolume+=item.getVolume();
             }
         }
@@ -39,8 +40,8 @@ public class task5 {
 
 
 class Item{
-    private int volume;
-    private int value;
+    private final int volume;
+    private final int value;
 
     Item(int volume, int value) {
         this.volume = volume;
@@ -55,10 +56,6 @@ class Item{
         return volume;
     }
 
-    public int getValue() {
-        return value;
-    }
-
     @Override
     public String toString() {
         return "Item{" +
@@ -69,7 +66,8 @@ class Item{
 }
 
 class Box{
-    int volume;
+    private final int volume;
+    public List<Item> items;
 
     Box(int volume){
         this.volume = volume;
@@ -78,4 +76,5 @@ class Box{
     public int getVolume() {
         return volume;
     }
+
 }

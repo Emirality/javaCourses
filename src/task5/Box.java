@@ -20,7 +20,7 @@ public class Box{
         for (Item item : list){
             while(fillingVolume+item.getVolume() <= this.getVolume()){
                 if (fillingVolume+ item.getVolume() > this.getVolume()){
-                    continue;
+                    break;
                 }
                 this.items.add(item);
                 fillingVolume+=item.getVolume();

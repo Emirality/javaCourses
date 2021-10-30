@@ -29,7 +29,7 @@ public class Box{
         showBoxValue();
     }
 
-    public  void showBoxValue(){
+    public void showBoxValue(){
         int boxValue = 0;
         for (Item item : this.items){
             boxValue += item.getValue();

@@ -8,7 +8,7 @@ import java.util.*;
 //делать первую гласную букву в слове заглавной
 //Предложение вводится пользователем вручную русскими буквами. Разделитель пробел (“ ”).
 
-public class task3 {
+public class Task3 {
     public static void main(String[] args) {
         System.out.println("Enter a sentence :");
         Scanner sc = new Scanner(System.in);
